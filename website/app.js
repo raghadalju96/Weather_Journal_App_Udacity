@@ -5,7 +5,6 @@ const apiKey = "&appid=841d8ce26c9ec8e048f0178f0fdc38cd";
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
-// console.log(newDate);
 
 document.getElementById("genrate").addEventListener("click", performance);
 
