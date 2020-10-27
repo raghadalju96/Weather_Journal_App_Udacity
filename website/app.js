@@ -1,6 +1,6 @@
 /* Global Variables */
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = "&appid=841d8ce26c9ec8e048f0178f0fdc38cd";
+const apiKey = "&appid=841d8ce26c9ec8e048f0178f0fdc38cd&units=imperial";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -64,8 +64,7 @@ const updateUI = async () => {
     const updatedData = await req.json();
     document.getElementById("title").innerHTML = "Most Recent Entry";
     document.getElementById("date").innerHTML = "Date: " + updatedData.date;
-    document.getElementById("temp").innerHTML =
-      Math.round(updatedData.temp - 273.15) + " &#x2103";
+    document.getElementById("temp").innerHTML = updatedData.temp;
     document.getElementById("content").innerHTML =
       "Feelings: " + updatedData.feeling;
   } catch (error) {
